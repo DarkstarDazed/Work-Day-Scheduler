@@ -1,3 +1,4 @@
+// function to check the time and display appropriate color 
 function timeCheck() {
     var currentHour = moment().hours();
 
@@ -17,3 +18,7 @@ function timeCheck() {
 }
 
 timeCheck();
+
+// variable that checks time every 15 seconds and writes that time to page
+var timeInterval = setInterval(timeCheck, 15000);
+$("#currentDay").text(moment().format('dddd, MMM Do hh:mm a'));
